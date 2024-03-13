@@ -17,13 +17,13 @@ public class Thief : Villager
 
     protected override void Attack()
     {
-        destination = transform.position;
+        
         base.Attack();
         Instantiate(KnifePrefab, spawnPoint.position, spawnPoint.rotation);
         Invoke("SecondKnife", 0.5f);
-
-        destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
+        destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        rb.position = destination;
         
     }
     private void SecondKnife()
