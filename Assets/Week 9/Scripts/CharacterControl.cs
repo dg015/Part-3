@@ -9,6 +9,8 @@ using UnityEngine;
 public class CharacterControl : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI selection;
+    public static CharacterControl Instance;
+
 
     public static Villager SelectedVillager { get; private set; }
     public static void SetSelectedVillager(Villager villager)
@@ -21,13 +23,14 @@ public class CharacterControl : MonoBehaviour
         }
         SelectedVillager = villager;
         SelectedVillager.Selected(true);
+        Instance.selection.text = villager.ToString();
     }
 
-
-    public void Update()
+    private void Start()
     {
-        GetVillager();
+        Instance = this;
     }
+
 
     public void GetVillager()
     {
