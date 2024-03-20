@@ -1,10 +1,14 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class Villager : MonoBehaviour
 {
+    public TMP_Dropdown dropdown;
+
     protected Rigidbody2D rb;
     Animator animator;
 
@@ -29,11 +33,25 @@ public class Villager : MonoBehaviour
         highlight.SetActive(isSelected);
     }
 
+    /*
     private void OnMouseDown()
     {
         CharacterControl.SetSelectedVillager(this);
         clickingOnSelf = true;
     }
+    */
+
+
+    public void ChangeVilager(Single value)
+    {
+
+        
+        CharacterControl.SetSelectedVillager(this);
+
+
+    }
+
+
 
     private void OnMouseUp()
     {
@@ -67,7 +85,7 @@ public class Villager : MonoBehaviour
     protected virtual void Update()
     {
         //left click: move to the click location
-        if (Input.GetMouseButtonDown(0) && isSelected && !clickingOnSelf)
+        if (Input.GetMouseButtonDown(0) && isSelected && !clickingOnSelf )
         {
             destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }

@@ -5,11 +5,14 @@ using System.Threading;
 using TMPro;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterControl : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI selection;
     public static CharacterControl Instance;
+
+    public Villager[] list;
 
 
     public static Villager SelectedVillager { get; private set; }
@@ -25,6 +28,13 @@ public class CharacterControl : MonoBehaviour
         SelectedVillager.Selected(true);
         Instance.selection.text = villager.ToString();
     }
+
+    public void DropDownSelectionChanged(int value)
+    {
+        SetSelectedVillager(list[value]);
+
+    }
+
 
     private void Start()
     {
