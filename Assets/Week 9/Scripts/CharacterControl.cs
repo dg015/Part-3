@@ -15,6 +15,7 @@ public class CharacterControl : MonoBehaviour
     public Villager[] list;
 
 
+
     public static Villager SelectedVillager { get; private set; }
     public static void SetSelectedVillager(Villager villager)
     {
@@ -33,6 +34,16 @@ public class CharacterControl : MonoBehaviour
     {
         SetSelectedVillager(list[value]);
 
+    }
+
+    public void sliderSelectionChanged(Single value)
+    {
+        if (SelectedVillager != null)
+        {
+            SelectedVillager.sliderScale = value;
+            // SelectedVillager.transform.localScale = new Vector3(value, value, value);
+
+        }
     }
 
 

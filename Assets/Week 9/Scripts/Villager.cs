@@ -4,10 +4,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Villager : MonoBehaviour
 {
     public TMP_Dropdown dropdown;
+    public Slider slider;
 
     protected Rigidbody2D rb;
     Animator animator;
@@ -20,8 +22,11 @@ public class Villager : MonoBehaviour
     protected Vector2 movement;
     protected float speed = 3;
 
+
+    public float sliderScale = 1;
+
     void Start()
-    {
+    {  
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         destination = transform.position;
@@ -41,6 +46,8 @@ public class Villager : MonoBehaviour
     }
     */
 
+
+  
 
     public void ChangeVilager(Single value)
     {
@@ -65,11 +72,11 @@ public class Villager : MonoBehaviour
         //flip the x direction of the game object & children to face the direction we're walking
         if(movement.x > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(-1 * sliderScale, sliderScale, sliderScale);
         }
         else if (movement.x < 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(sliderScale, sliderScale, sliderScale);
         }
 
         //stop moving if we're close enough to the target
