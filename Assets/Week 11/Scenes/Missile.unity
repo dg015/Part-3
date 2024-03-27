@@ -3461,8 +3461,10 @@ MonoBehaviour:
   turningSpeedReduction: 0.75
   action: 0
   time: 0
-  limit: 0
+  limit: 5
   ready: 0
+  Running: 0
+  distance: 0
 --- !u!4 &2015163502
 Transform:
   m_ObjectHideFlags: 0
