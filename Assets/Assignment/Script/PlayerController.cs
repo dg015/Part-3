@@ -55,8 +55,9 @@ public class PlayerController : MonoBehaviour
         }
         if (colisions > 0)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKey(KeyCode.Space))
             {
+                Debug.Log("jump");
 
                 rb.AddForce(new Vector2(0, jumpForce) * speed * Time.deltaTime, ForceMode2D.Impulse);
                 Debug.Log("pressed");
