@@ -55,6 +55,7 @@ public class PlayerController : MonoBehaviour
         }
         if (colisions > 0)
         {
+            rb.velocity = Vector3.ClampMagnitude(rb.velocity, 15);
             if (Input.GetKey(KeyCode.Space))
             {
                 Debug.Log("jump");
@@ -64,7 +65,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         // sets the velocity based on a vector3 the clampsthe value inputed wihch is transformed into lenght only.
-        rb.velocity = Vector3.ClampMagnitude(rb.velocity, 15);
+        
     }
 
 
