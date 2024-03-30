@@ -391,7 +391,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &275368238
 Transform:
   m_ObjectHideFlags: 0
@@ -418,16 +418,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 275368237}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62307b955bf0ccf47b72cb5601fce1c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 5ffc3fdc205bb5f459d120bee285619e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   barrel: {fileID: 175899624}
-  explosionStrenght: 180
+  explosionStrenght: 15
   offset: 0
   player: {fileID: 1840471122}
   direction: {x: 0, y: 0}
   projectile: {fileID: 4980578404168893269, guid: 3e6d9bd17aef2ee41868f09f5d25135d, type: 3}
   damage: 15
+  Overheat: 0
+  coolingdownTime: 0
+  timeBetweenShots: 0
+  readyToFire: 1
 --- !u!1 &329164730
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,7 +1263,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1379551687
 Transform:
   m_ObjectHideFlags: 0
