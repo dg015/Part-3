@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.Sockets;
 using Unity.VisualScripting;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.Experimental.AI;
@@ -13,6 +14,9 @@ public class Gun : MonoBehaviour
     [SerializeField] protected float offset;
     [SerializeField] protected Rigidbody2D player;
     [SerializeField] protected Vector2 direction;
+    [SerializeField] protected GameObject projectile;
+    [SerializeField] protected float damage = 15;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +27,7 @@ public class Gun : MonoBehaviour
     void Update()
     {
         lookat();
-        shoot();
+        nockback();
     }
 
 
@@ -40,14 +44,17 @@ public class Gun : MonoBehaviour
     }
 
 
-    protected void shoot ()
+    protected virtual void nockback ()
     {
-        if (Input.GetMouseButton(0)) 
+        if (Input.GetMouseButtonUp(0)) 
         {
             player.AddForce(-1 * direction * explosionStrenght, ForceMode2D.Force);
-        
+            shooot();
         }
     }
 
-
+    protected void shooot()
+    {
+        Instantiate(projectile, barrel.position,barrel.rotation);
+    }
 }
