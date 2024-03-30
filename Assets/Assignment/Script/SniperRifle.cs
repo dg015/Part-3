@@ -1,6 +1,7 @@
 using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.SqlTypes;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -11,13 +12,11 @@ public class SniperRifle : Gun
     [SerializeField] private CinemachineVirtualCamera Cinemachine;
     [SerializeField] private CinemachineBasicMultiChannelPerlin shake;
     [SerializeField] private float shakeIntensity;
-    [SerializeField] private float time;
-    [SerializeField] private float timeMax;
+    [SerializeField] private float Shaketime;
+    [SerializeField] private float shaketimeMax;
+    [SerializeField] private float timeBetweenShots;
+    [SerializeField] private bool readyToFire = true;
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
 
     private void Awake()
@@ -27,10 +26,13 @@ public class SniperRifle : Gun
     // Update is called once per frame
     void Update()
     {
-        
         lookat();
-        nockback();
         CameraShakeTimer();
+        if (Input.GetMouseButton(0) && readyToFire)
+        {
+            StartCoroutine(shootingCycle());
+        }
+
     }
 
 
@@ -44,31 +46,33 @@ public class SniperRifle : Gun
     { 
         if( shake.m_AmplitudeGain > 0)
         {
-           time += Time.deltaTime;
-           if (time > timeMax )
+            Shaketime += Time.deltaTime;
+           if (Shaketime > shaketimeMax)
             {
-
                 shake.m_AmplitudeGain = 0;
-                time = 0;
-
+                Shaketime = 0;
             }
 
-
         }
-
-
     }
 
     protected override void nockback()
     {
-        if (Input.GetMouseButtonUp(0))
-        {
-            
-            player.AddForce(-1 * direction * explosionStrenght, ForceMode2D.Force);
-            shooot();
-            CameraShake();
-            
-        }
+        player.AddForce(-1 * direction * explosionStrenght, ForceMode2D.Force);
+        shooot();
+        CameraShake();
+    }
+
+    private IEnumerator shootingCycle()
+    {
+        
+        nockback();
+        readyToFire = false;
+        yield return new WaitForSeconds(timeBetweenShots);
+        Debug.Log("I'me here");
+        readyToFire = true;
+
+
     }
 
 }
