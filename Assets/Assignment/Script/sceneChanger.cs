@@ -14,7 +14,8 @@ public class sceneChanger : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Timer tm = gameObject.GetComponent<Timer>();
+        Timer tm = GameObject.Find("TIme manager").GetComponent<Timer>();
+        //Timer tm = gameObject.GetComponent<Timer>();
         showRecord();
     }
 

@@ -47,11 +47,11 @@ public class Minigun : Gun
             Overheat += Time.deltaTime;
         }
         
-        else if (Overheat == 6)
+        else if (Overheat == 2.5)
         {
             readyToFire = false;
         }
-        if (Overheat < 6)
+        if (Overheat < 2.5)
         {
             readyToFire = true;
         }
@@ -71,7 +71,6 @@ public class Minigun : Gun
     protected override void nockback()
     {
         player.AddForce(-1 * direction * explosionStrenght, ForceMode2D.Force);
-        shooot();
     }
     private IEnumerator shootingCycle()
     {
@@ -79,7 +78,7 @@ public class Minigun : Gun
         nockback();
         overhearting();
         readyToFire = false;
-        if (Overheat >= 6)
+        if (Overheat >= 2.5)
         {
             yield return new WaitForSeconds(5);
         }
