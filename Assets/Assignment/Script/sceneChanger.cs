@@ -28,7 +28,7 @@ public class sceneChanger : MonoBehaviour
 
     public void gameOverScreen()
     {
-        PlayerPrefs.SetFloat("currenTtime", tm.time);
+        PlayerPrefs.SetFloat("currentTtime", tm.time);
         float highestScore = PlayerPrefs.GetFloat("time");
         if (tm.time < highestScore)
         {
@@ -41,7 +41,7 @@ public class sceneChanger : MonoBehaviour
 
     public void showRecord()
     {
-        float currentTime = PlayerPrefs.GetFloat("currentTime");
+        float currentTime = PlayerPrefs.GetFloat("currentTtime");
         float time = PlayerPrefs.GetFloat("time");
         text.text ="Time: " + string.Format("{0:0.00}", currentTime) + "<br>Fastest time: " + string.Format("{0:0.00}", time); 
 
