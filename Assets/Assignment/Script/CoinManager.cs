@@ -11,6 +11,7 @@ public class CoinManager : MonoBehaviour
 
     [SerializeField]public static int score;
     [SerializeField]public static int MaxScore = 1;
+    [SerializeField] private GameObject scene;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,11 +20,12 @@ public class CoinManager : MonoBehaviour
     }
 
 
-    private void update ()
+    private void Update()
     {
-        Debug.Log(score);
+       // Debug.Log(score);
         WinGame();
-        Debug.Log(Coin.coinCount);
+        ScoreChecker();
+        //Debug.Log(Coin.coinCount);
     }
     public static void addScore(int value)
     {
@@ -33,23 +35,27 @@ public class CoinManager : MonoBehaviour
 
     public static void WinGame()
     {
-        if (score >= Coin.coinCount)
+        if (score == 8)
         {
             Debug.Log("you won the game");
         }
 
     }
 
+    private void ScoreChecker()
+    {
+        if (score == 8)
+        {
+            scene.SendMessage("gameOverScreen");
+        }
+    
+    
+    }
+
+
 
     public static void resetScore()
     {
         score = 0;
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

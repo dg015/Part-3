@@ -484,6 +484,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -585,7 +589,6 @@ GameObject:
   - component: {fileID: 540441717}
   - component: {fileID: 540441716}
   - component: {fileID: 540441715}
-  - component: {fileID: 540441719}
   m_Layer: 0
   m_Name: Plataform (2)
   m_TagString: Untagged
@@ -732,20 +735,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &540441719
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 540441714}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67f4bd0d1a73994984d9e1dc729bc7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 540441717}
-  boxCollider: {fileID: 0}
 --- !u!1 &551993811
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,6 +914,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -973,7 +966,6 @@ GameObject:
   - component: {fileID: 805156565}
   - component: {fileID: 805156564}
   - component: {fileID: 805156563}
-  - component: {fileID: 805156562}
   m_Layer: 0
   m_Name: Plataform (8)
   m_TagString: Untagged
@@ -981,20 +973,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &805156562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 805156561}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67f4bd0d1a73994984d9e1dc729bc7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 805156565}
-  boxCollider: {fileID: 0}
 --- !u!50 &805156563
 Rigidbody2D:
   serializedVersion: 4
@@ -1230,7 +1208,6 @@ GameObject:
   - component: {fileID: 982052584}
   - component: {fileID: 982052583}
   - component: {fileID: 982052582}
-  - component: {fileID: 982052581}
   m_Layer: 0
   m_Name: Plataform (5)
   m_TagString: Untagged
@@ -1238,23 +1215,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &982052581
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 982052580}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1869655004159984bb002536ac82096b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 982052584}
-  boxCollider: {fileID: 982052583}
-  time: 0
-  maxTime: 0
-  disapearTime: 0
 --- !u!50 &982052582
 Rigidbody2D:
   serializedVersion: 4
@@ -1446,6 +1406,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1463,7 +1427,6 @@ GameObject:
   - component: {fileID: 1135019557}
   - component: {fileID: 1135019556}
   - component: {fileID: 1135019555}
-  - component: {fileID: 1135019554}
   m_Layer: 0
   m_Name: Plataform (4)
   m_TagString: Untagged
@@ -1471,23 +1434,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1135019554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1135019553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1869655004159984bb002536ac82096b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 1135019557}
-  boxCollider: {fileID: 1135019556}
-  time: 0
-  maxTime: 0
-  disapearTime: 0
 --- !u!50 &1135019555
 Rigidbody2D:
   serializedVersion: 4
@@ -1679,6 +1625,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1854,7 +1804,6 @@ GameObject:
   - component: {fileID: 1340434604}
   - component: {fileID: 1340434603}
   - component: {fileID: 1340434602}
-  - component: {fileID: 1340434601}
   m_Layer: 0
   m_Name: Plataform (6)
   m_TagString: Untagged
@@ -1862,20 +1811,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1340434601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1340434600}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67f4bd0d1a73994984d9e1dc729bc7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 1340434604}
-  boxCollider: {fileID: 0}
 --- !u!50 &1340434602
 Rigidbody2D:
   serializedVersion: 4
@@ -2087,7 +2022,6 @@ GameObject:
   - component: {fileID: 1384095160}
   - component: {fileID: 1384095159}
   - component: {fileID: 1384095158}
-  - component: {fileID: 1384095157}
   m_Layer: 0
   m_Name: Plataform (7)
   m_TagString: Untagged
@@ -2095,20 +2029,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1384095157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384095156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f67f4bd0d1a73994984d9e1dc729bc7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 1384095160}
-  boxCollider: {fileID: 0}
 --- !u!50 &1384095158
 Rigidbody2D:
   serializedVersion: 4
@@ -2542,6 +2462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2683,11 +2607,59 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coin (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+--- !u!1 &1774566089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1774566091}
+  - component: {fileID: 1774566090}
+  m_Layer: 0
+  m_Name: scene changer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1774566090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774566089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bbd029fb9432dd4bb6a6a291b60811e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1774566091
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774566089}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.6233721, y: -0.6949975, z: 0.006209277}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1794913441
 GameObject:
   m_ObjectHideFlags: 0
@@ -2717,6 +2689,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ec438c800cfce8419b82dd4296be26a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scene: {fileID: 1774566089}
 --- !u!4 &1794913443
 Transform:
   m_ObjectHideFlags: 0
@@ -2783,6 +2756,10 @@ PrefabInstance:
     - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
       propertyPath: m_Name
       value: Coin (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3064693451943593851, guid: f0a67057ba1e7a945995f60479b26322, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3050,7 +3027,6 @@ GameObject:
   - component: {fileID: 2103521424}
   - component: {fileID: 2103521423}
   - component: {fileID: 2103521422}
-  - component: {fileID: 2103521421}
   m_Layer: 0
   m_Name: Plataform (3)
   m_TagString: Untagged
@@ -3058,23 +3034,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2103521421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2103521420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1869655004159984bb002536ac82096b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprite: {fileID: 2103521424}
-  boxCollider: {fileID: 2103521423}
-  time: 0
-  maxTime: 0
-  disapearTime: 0
 --- !u!50 &2103521422
 Rigidbody2D:
   serializedVersion: 4
@@ -3297,3 +3256,4 @@ SceneRoots:
   - {fileID: 1115582799}
   - {fileID: 592558038}
   - {fileID: 1748461462}
+  - {fileID: 1774566091}
