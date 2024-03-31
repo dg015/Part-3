@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public bool running = true;
+    public static bool running = true;
     public float time;
     [SerializeField] private TextMeshProUGUI text;
     // Start is called before the first frame update
