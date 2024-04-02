@@ -38,17 +38,20 @@ public class SniperRifle : Gun
 
     public void CameraShake()
     {
-        
+        //add camera shake 
         shake.m_AmplitudeGain = shakeIntensity;
     }
 
     private void CameraShakeTimer()
     { 
+        // check if theres any shake on the camerea
         if( shake.m_AmplitudeGain > 0)
         {
+            //increase shake time
             Shaketime += Time.deltaTime;
            if (Shaketime > shaketimeMax)
             {
+                //set camera shake to 0 
                 shake.m_AmplitudeGain = 0;
                 Shaketime = 0;
             }

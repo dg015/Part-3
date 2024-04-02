@@ -495,7 +495,6 @@ MonoBehaviour:
   player: {fileID: 1840471122}
   direction: {x: 0, y: 0}
   projectile: {fileID: 4980578404168893269, guid: 3e6d9bd17aef2ee41868f09f5d25135d, type: 3}
-  damage: 15
   Overheat: 0
   coolingdownTime: 0
   timeBetweenShots: 0
@@ -2222,12 +2221,11 @@ MonoBehaviour:
   player: {fileID: 1840471122}
   direction: {x: 0, y: 0}
   projectile: {fileID: 4980578404168893269, guid: 3e6d9bd17aef2ee41868f09f5d25135d, type: 3}
-  damage: 15
   Cinemachine: {fileID: 2095288020}
   shake: {fileID: 0}
   shakeIntensity: 15
   Shaketime: 0
-  shaketimeMax: 0
+  shaketimeMax: 0.1
   timeBetweenShots: 1
   readyToFire: 1
 --- !u!1 &1384095156
@@ -2682,7 +2680,6 @@ MonoBehaviour:
   player: {fileID: 1840471122}
   direction: {x: 0, y: 0}
   projectile: {fileID: 4980578404168893269, guid: 3e6d9bd17aef2ee41868f09f5d25135d, type: 3}
-  damage: 15
 --- !u!1 &1490296010
 GameObject:
   m_ObjectHideFlags: 0

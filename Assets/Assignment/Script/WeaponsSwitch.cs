@@ -24,6 +24,7 @@ public class WeaponsSwitch : MonoBehaviour
 
     private void holdingGun()
     {
+        //set every gun index to what weapon should be active
         if (currentGun ==1)
         {
             gun.SetActive(true);
@@ -52,14 +53,13 @@ public class WeaponsSwitch : MonoBehaviour
     {
         if(Input.GetAxis("Mouse ScrollWheel") > 0f )
         {
-
             currentGun ++;
         }
         if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
-
             currentGun++;
         }
+        //if it goes out of bounds just loop around
         if( currentGun > 3)
         {
             currentGun = 1;

@@ -17,6 +17,8 @@ public class Coin : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        // add 1 point to score and destroy object 
+
         CoinManager.addScore(1);
         Destroy(gameObject);
     }

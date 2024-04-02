@@ -16,21 +16,12 @@ public class Minigun : Gun
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetMouseButton(0)) 
-        {
-            overhearting();
-            nockback();
-        }
-        else
-        {
-            coolingDown();
-        }
-        */
+        //call function to look mouse direction
         lookat();
-        
+        //check if plaeyr is pressing the mouse button and can fire
         if (Input.GetMouseButton(0) && readyToFire)
         {
+           
             StartCoroutine(shootingCycle());
         }
         else
@@ -42,6 +33,7 @@ public class Minigun : Gun
 
     private void overhearting()
     {
+        // if player is with the mouse down increment the overheat varaible by the second
         if ( Input.GetMouseButton (0)) 
         {
             Overheat += Time.deltaTime;
@@ -49,10 +41,12 @@ public class Minigun : Gun
         
         else if (Overheat == 2.5)
         {
+            // if its 2.5 make it unable to fire
             readyToFire = false;
         }
         if (Overheat < 2.5)
         {
+            //if its less then 2.5 make it able to fire
             readyToFire = true;
         }
     }
@@ -61,6 +55,7 @@ public class Minigun : Gun
         
         if (Overheat > 0)
         {
+            //if its higher then 0 deduct overheat by the second
             Overheat -= Time.deltaTime;
         }
 

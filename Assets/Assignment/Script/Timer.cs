@@ -26,6 +26,7 @@ public class Timer : MonoBehaviour
     {
         if ( running)
         {
+            //increase time by the second and show the time in the UI based on the format
             time += Time.deltaTime;
             text.text =  "timer:" + string.Format("{0:0.00}",time);
         }
